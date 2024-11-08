@@ -16,8 +16,19 @@ class myForm(QDialog):
 
 
     def zmien(self):
-        if self.ui.male.clicked:
-            self.ui.value2.setText(self.ui.value1.lower())
+        size = "none"
+        if self.ui.male.isChecked():
+            size = self.ui.value1.text()
+            self.ui.value2.setText(size.lower())
+
+        if self.ui.duze.isChecked():
+            size = self.ui.value1.text()
+            self.ui.value2.setText(size.upper())
+
+        if self.ui.odwrotnie.isChecked():
+            size = self.ui.value1.text()
+            self.ui.value2.setText(size[::-1])
+
 
 
 
