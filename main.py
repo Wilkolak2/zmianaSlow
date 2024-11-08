@@ -26,7 +26,9 @@ class myForm(QDialog):
 
         if self.ui.odwrotnie.isChecked():
             text = self.ui.value1.text()
-            self.ui.value2.setText(text[::-1])
+            self.ui.value2.setText(text.swapcase())
+
+
 
 
 
