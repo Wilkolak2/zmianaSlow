@@ -12,16 +12,19 @@ class myForm(QDialog):
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
         self.show()
-        self.ui.zmien.clicked.connect(self.zmien)
+        # self.ui.zmien.clicked.connect(self.zmien)
+        self.ui.value1.textChanged.connect(self.zmien)
 
 
     def zmien(self):
+        text = self.ui.value1.text()
+        result = text
         if self.ui.male.isChecked():
-            text = self.ui.value1.text()
+            result = text.lower()
             self.ui.value2.setText(text.lower())
 
         if self.ui.duze.isChecked():
-            text = self.ui.value1.text()
+            result = ste
             self.ui.value2.setText(text.upper())
 
         if self.ui.odwrotnie.isChecked():
