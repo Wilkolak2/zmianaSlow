@@ -16,18 +16,17 @@ class myForm(QDialog):
 
 
     def zmien(self):
-        size = "none"
         if self.ui.male.isChecked():
-            size = self.ui.value1.text()
-            self.ui.value2.setText(size.lower())
+            text = self.ui.value1.text()
+            self.ui.value2.setText(text.lower())
 
         if self.ui.duze.isChecked():
-            size = self.ui.value1.text()
-            self.ui.value2.setText(size.upper())
+            text = self.ui.value1.text()
+            self.ui.value2.setText(text.upper())
 
         if self.ui.odwrotnie.isChecked():
-            size = self.ui.value1.text()
-            self.ui.value2.setText(size[::-1])
+            text = self.ui.value1.text()
+            self.ui.value2.setText(text[::-1])
 
 
 
@@ -36,3 +35,4 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = myForm()
     sys.exit(app.exec())
+
